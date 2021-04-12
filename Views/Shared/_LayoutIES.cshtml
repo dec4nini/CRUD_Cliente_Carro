@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+            <img src="~/images/CarrosIconProject.png" width="50" height="50"
+                 alt="logo do trabalho" />
+            ASP .NET CORE MVC
+        </a>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">&nbsp;</div>
+            <div class="col-12">&nbsp;</div>
+            <div class="col-12">&nbsp;</div>
+            <div class="col-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <nav class="nav flex-column">
+                    <a class="navbar-link active" asp-controller="Cliente" asp-action="Index">
+                        <img src="~/images/ClienteIcon.png" width="30" height="30" />
+                        Clientes
+                    </a>
+                    <br />
+                    <a class="navbar-link" asp-controller="Carro" asp-action="Index">
+                        <img src="~/images/CarroIcon.png" width="30" height="30" />
+                        Carros
+                    </a>
+                </nav>
+            </div>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-12">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar fixed-bottom" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">Sistema</a>
+    </nav>
+    @RenderSection("ScriptPage", required: false)
+</body>
+</html>
+
+
